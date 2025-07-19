@@ -19,6 +19,7 @@ public class BoulderChecker : MonoBehaviour
         {
             //Touch timer counts down and if done 
             //door moves up and player wins
+            Debug.Log("No Player is touching.");
         }
     }
 }
