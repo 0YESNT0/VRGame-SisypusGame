@@ -11,10 +11,12 @@ public class OnAreaEnterScript : MonoBehaviour
     public UnityEvent OnColliderExit = new UnityEvent();
 
     private void OnTriggerEnter(Collider collider){
-        if(collider.gameObject.CompareTag(DetectTag) == true)OnColliderEnter?.Invoke();
+        if (DetectTag == null) return;
+        if (collider.gameObject.CompareTag(DetectTag) == true) OnColliderEnter?.Invoke();
     }
     private void OnTriggerExit(Collider collider){
-        if(collider.gameObject.CompareTag(DetectTag) == true) OnColliderExit?.Invoke();
+        if (DetectTag == null) return;
+        if (collider.gameObject.CompareTag(DetectTag) == true) OnColliderExit?.Invoke();
     }
 
 }
