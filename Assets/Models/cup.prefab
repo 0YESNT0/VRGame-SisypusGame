@@ -26,17 +26,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 9a18b0c8b1974c74d9a45f8d90e10fc9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.87
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a18b0c8b1974c74d9a45f8d90e10fc9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 50.151
+      value: 7.59
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a18b0c8b1974c74d9a45f8d90e10fc9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -25
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a18b0c8b1974c74d9a45f8d90e10fc9,
         type: 3}
@@ -90,6 +90,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9a18b0c8b1974c74d9a45f8d90e10fc9,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: -4611077655657401254}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9a18b0c8b1974c74d9a45f8d90e10fc9,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 6484871176173267283}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9a18b0c8b1974c74d9a45f8d90e10fc9,
         type: 3}
@@ -102,6 +106,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 9045870559801212171}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &-4611077655657401254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8162785909160296538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5bd32f8d869d344f8808857e8271519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  postProcessingManager: {fileID: 0}
+  vignetteIntensity: 0.5
+  durationOfVignette: 5
 --- !u!54 &6484871176173267283
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -121,14 +140,14 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 72
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &4620764423194588130
 BoxCollider:
   m_ObjectHideFlags: 0
