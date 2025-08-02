@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class MovementReversedScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("Collided with player");
+            DebuffManager.Instance.StartReverseDebuff();
+            
+        }
+       Destroy(gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

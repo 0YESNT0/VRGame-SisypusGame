@@ -15,9 +15,9 @@ public class VignetteDebuff : MonoBehaviour
 
     void Start()
     {
-        xrOrigin = GameObject.Find("XR Origin (XR Rig)");
+        //xrOrigin = GameObject.Find("XR Origin (XR Rig)");
         tunnelingVignette = GameObject.Find("TunnelingVignette");
-        tunnelingVignetteController = tunnelingVignette.GetComponent <TunnelingVignetteController >();
+        tunnelingVignetteController = tunnelingVignette.GetComponent <TunnelingVignetteController>();
         if (tunnelingVignetteController == null)
         {
             Debug.LogError("Tunneling Vignette not found");
@@ -39,9 +39,7 @@ public class VignetteDebuff : MonoBehaviour
 
     private IEnumerator VignetteEffect()
     {
-        tunnelingVignetteController.BeginTunnelingVignette();
-        Destroy(gameObject);
-        yield break;
+        tunnelingVignetteController.defaultParameters.apertureSize = 0.2f;
         
     }
 }
