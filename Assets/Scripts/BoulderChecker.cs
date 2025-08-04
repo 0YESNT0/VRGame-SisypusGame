@@ -6,6 +6,9 @@ public class BoulderChecker : MonoBehaviour
 {
     [SerializeField] public GameObject boulder;
     [SerializeField] public float touchTimer = 5.0f;
+    [SerializeField] public GameObject door;
+    [SerializeField] private Transform doorWaypoint;
+    [SerializeField] private float doorMoveSpeed = 5.0f;
     private Collider boulderCollider;
     public void Touchcheck()
     {
@@ -20,6 +23,17 @@ public class BoulderChecker : MonoBehaviour
             //Touch timer counts down and if done 
             //door moves up and player wins
             Debug.Log("No Player is touching.");
+            if (touchTimer <= 0)
+            {
+                door.transform.position = Vector3.MoveTowards(door.transform.position, doorWaypoint.position, doorMoveSpeed);
+                Rigidbody rb = boulder.GetComponent<Rigidbody>();
+                rb.isKinematic = true;
+            }
         }
+    }
+
+    void Update()
+    {
+        touchTimer -= Time.deltaTime;
     }
 }
