@@ -13,11 +13,12 @@ public class ResetGame : MonoBehaviour
     [SerializeField] private Transform doorOrigPosition;
     void OnTriggerEnter(Collider other)
     {
+        if (!other.CompareTag("Player")) return;
         player.GetComponent<CharacterController>().enabled = false;
         player.transform.position = playerSpawn.transform.position;
         player.GetComponent<CharacterController>().enabled = true;
         boulder.transform.position = boulderSpawn.transform.position;
-        boulder.transform.localScale *= 2;
+        boulder.transform.localScale *= 1.25f;
         StopCoroutine(DoorMoveDown());
         StartCoroutine(DoorMoveDown());
     }

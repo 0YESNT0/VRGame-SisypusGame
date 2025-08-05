@@ -54,7 +54,7 @@ public class DebuffManager : MonoBehaviour
         tunnelingVignetteController.defaultParameters.apertureSize = vignetteIntensity;
         tunnelingVignetteController.defaultParameters.easeOutDelayTime = durationOfVignette;
         yield return new WaitForSeconds(reverseDuration);
-        tunnelingVignetteController.defaultParameters.apertureSize = 0.3f;
+        tunnelingVignetteController.defaultParameters.apertureSize = 1f;
         tunnelingVignetteController.defaultParameters.easeOutDelayTime = 0f;
     }
 
